@@ -25,6 +25,7 @@
     document.querySelectorAll(".drum")[i].addEventListener('click',function(){
         var buttonInnerHtml = this.innerHTML;
         makeSound(buttonInnerHtml);
+        buttonAnimation(buttonInnerHtml);
        
     });
 
@@ -32,6 +33,7 @@
        /*for keybord press key */
    document.addEventListener("keypress", function(event){
    makeSound(event.key);
+   buttonAnimation(event.key);
    })
    function makeSound(key){
     switch (key) {
@@ -65,5 +67,14 @@
             break;
         default:console.log(buttonInnerHtml)
     }
+   }
+   /*add animation  */
+
+   function buttonAnimation(currentKey){
+ var active=  document.querySelector("."+currentKey);
+ active.classList.add("pressed");
+ setTimeout(function(){
+    active.classList.remove("pressed")
+ },200);//repsesent seconds
    }
 

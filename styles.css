@@ -18,6 +18,7 @@ footer {
 
 .w {
   background-image: url("images/crash.png");
+  
 
 }
 
@@ -48,6 +49,7 @@ footer {
 
 .set {
   margin: 10% auto;
+  margin-top: -5px;
 }
 
 .game-over {
