@@ -62,3 +62,7 @@
 
    }
 
+   document.addEventListener("keypress", function(){
+    alert("i got clicked");
+   })
+
